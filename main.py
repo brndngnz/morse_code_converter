@@ -11,7 +11,7 @@ def to_morse_code(string):
             position = numbers.index(char)
             string = string.replace(char, morse_code_nums[position] + '   ')
 
-    print(string)
+    print(f"The encrypted message is:\n{string}")
 
 
 # def to_alphabet(msg):
@@ -34,7 +34,7 @@ while not done:
     message = input("What is your message?\n").lower().replace(" ", "       ")
     to_morse_code(message)
 
-    restart = input("Type 'yes' if you want to convert more. Otherwise type 'no'.\n")
+    restart = input("Type 'yes' if you want to convert another message. Otherwise type 'no'.\n")
     if restart == "no":
         done = True
         print("Thanks for using the Morse Code Generator!")
